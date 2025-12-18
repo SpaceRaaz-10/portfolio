@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ExternalLink, Eye, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { link } from "fs";
 import { useRef, useState } from "react";
 
 const projects = [
@@ -14,7 +13,7 @@ const projects = [
     category: "Website",
     tools: ["Figma"],
     color: "from-orange-400 to-white-400",
-    image: "/src/assets/Project/mountain.jpg?w=800&auto=format&fit=crop",
+    image: "/Project/mountain.jpg",
     link: "https://www.figma.com/proto/9OIa2uO1DQjcy5Fya6l2ck/Mountain-Website-UI?node-id=1-2&t=twaFoTIvA57snx2g-6&starting-point-node-id=1%3A2",
   },
   {
@@ -25,7 +24,7 @@ const projects = [
     category: "Mobile App",
     tools: ["Figma", "Photoshop", "Framer"],
     color: "from-pink-500 to-white-500",
-    image: "/src/assets/Project/gymapp.jpg?w=800&auto=format&fit=crop",
+    image: "/Project/gymapp.jpg",
     link: "https://www.figma.com/proto/yjojigF68gGpcYtQ6yCCZJ/Fitness-App?node-id=221-124&t=twaFoTIvA57snx2g-6&starting-point-node-id=221%3A124",
   },
   {
@@ -36,7 +35,7 @@ const projects = [
     category: "Business Website",
     tools: ["Figma", "Photoshop"],
     color: "from-purple-500 to-white-500",
-    image: "/src/assets/Project/stripe.jpg?w=800&auto=format&fit=crop",
+    image: "/Project/stripe.jpg",
     link: "https://www.figma.com/proto/iXsz1YtBV5iuM3qr0eQcBn/Stripe?node-id=1-4&t=twaFoTIvA57snx2g-6",
   },
   {
@@ -47,7 +46,7 @@ const projects = [
     category: "Backend Dashboard",
     tools: ["Figma"],
     color: "from-cyan-500 to-skyblue-500",
-    image: "/src/assets/Project/realstateadmin.jpg?w=800&auto=format&fit=crop",
+    image: "/Project/realstateadmin.jpg",
     link: "https://www.figma.com/proto/xWQfnMOJSh2FS4TWICAG5c/Real-State-Admin?page-id=0%3A1&node-id=1-2&viewport=237%2C-29%2C0.21&t=gBhWsboZYotTI9R4-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1",
   },
   {
@@ -58,7 +57,7 @@ const projects = [
     category: "Website",
     tools: ["Figma", "Illustrator", "Photoshop"],
     color: "from-orange-500 to-white-500",
-    image: "/src/assets/Project/smoothjuice.jpg?w=800&auto=format&fit=crop",
+    image: "/Project/smoothjuice.jpg",
     link: "https://www.figma.com/proto/sHFagBdhzgngDgpOLJrIpz/Smootte-Juice-UI?node-id=10-219&t=twaFoTIvA57snx2g-6&starting-point-node-id=10%3A219",
   },
   {
@@ -69,7 +68,7 @@ const projects = [
     category: "Website",
     tools: ["Figma"],
     color: "from-purple-500 to-white-500",
-    image: "/src/assets/Project/wokfolio.png?w=800&auto=format&fit=crop",
+    image: "/Project/wokfolio.png",
     link: "https://www.figma.com/proto/agI8fBcaQi8XdZS5glDn8p/GetWorkFolio?page-id=0%3A1&node-id=1-2&p=f&viewport=1064%2C-841%2C0.26&t=ghPS375fjHnIt6Ho-1&scaling=scale-down&content-scaling=fixed",
   },
 ];
