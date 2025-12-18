@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useSpring, useInView } from "framer-mo
 import { useRef, useEffect, useState } from "react";
 import { Award, Coffee, Users, Briefcase, Heart, MapPin, Calendar, Star, Zap, BookOpen, Palette, Download, Laptop, Gamepad, Code } from "lucide-react";
 import rajPhoto from "@/assets/raj.jpg";
+import { UserRound } from "lucide-react";
 
 const stats = [
   { label: "Years Learning UX", value: 1.5, suffix: "", icon: Laptop },
@@ -34,7 +35,7 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
       const steps = 60;
       const increment = value / steps;
       let current = 0;
-      
+
       const timer = setInterval(() => {
         current += increment;
         if (current >= value) {
@@ -59,7 +60,7 @@ function AnimatedCounter({ value, suffix = "" }: { value: number; suffix?: strin
 export function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
-  
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start end", "end start"],
@@ -69,7 +70,7 @@ export function AboutSection() {
     stiffness: 100,
     damping: 30
   });
-  
+
   const rotate = useTransform(scrollYProgress, [0, 1], [5, -5]);
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
@@ -115,7 +116,7 @@ export function AboutSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Image with 3D Effect */}
-          <motion.div 
+          <motion.div
             ref={imageRef}
             style={{ y, rotateZ: rotate, scale }}
             className="relative order-2 lg:order-1"
@@ -146,7 +147,7 @@ export function AboutSection() {
                 />
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60" />
-                
+
                 {/* Floating Name Tag */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
@@ -155,11 +156,11 @@ export function AboutSection() {
                   className="absolute bottom-6 left-6 right-6 bg-card/90 backdrop-blur-md p-4 rounded-2xl border border-border/50"
                 >
                   <h3 className="text-xl font-bold">Raj Sigdel</h3>
-                  <p className="text-muted-foreground text-sm">Aspiring UX/UI Designer</p>
+                  <p className="text-muted-foreground text-sm">Aspiring UX/UI & Web Designer</p>
                 </motion.div>
               </motion.div>
 
-              {/* Floating Badges */}
+              {/* Floating Person */}
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -168,7 +169,7 @@ export function AboutSection() {
                 animate={{ y: [0, -8, 0] }}
                 className="absolute -top-4 -right-4 z-20 bg-gradient-primary p-4 rounded-2xl shadow-xl"
               >
-                <Award className="w-8 h-8 text-primary-foreground" />
+                <UserRound className="w-9 h-9 text-primary-foreground opacity-90" />
               </motion.div>
 
               <motion.div
@@ -200,8 +201,8 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
               >
-                I'm <span className="text-foreground font-semibold">Raj Sigdel</span>, 
-                an aspiring UX/UI designer with about 1 year of self-learning experience. 
+                I'm <span className="text-foreground font-semibold">Raj Sigdel</span>,
+                an aspiring UX/UI designer with about 1 year of self-learning experience.
                 I'm new to this field but deeply passionate about creating meaningful digital experiences.
               </motion.p>
               <motion.p
@@ -210,8 +211,8 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                Currently, I work as a <span className="text-foreground font-semibold">Graphic Designer at Blaze Mountains Travels</span> while 
-                pursuing my passion for UX/UI design through self-learning. I've completed <span className="text-foreground font-semibold">almost 7 personal projects</span> to 
+                Currently, I work as a <span className="text-foreground font-semibold">Graphic Designer at Blaze Mountains Travels</span> while
+                pursuing my passion for UX/UI design through self-learning. I've completed <span className="text-foreground font-semibold">almost 7 personal projects</span> to
                 build my skills and portfolio.
               </motion.p>
               <motion.p
@@ -220,8 +221,8 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                While I'm still developing my technical skills in tools like Figma and Web Development related software, 
-                I bring <span className="text-foreground font-semibold">creativity, dedication, and a strong design eye</span> from my 
+                While I'm still developing my technical skills in tools like Figma and Web Development related software,
+                I bring <span className="text-foreground font-semibold">creativity, dedication, and a strong design eye</span> from my
                 graphic design background. I'm eager to grow and take on new challenges in UX/UI.
               </motion.p>
             </div>
@@ -318,7 +319,7 @@ export function AboutSection() {
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
             My <span className="text-gradient">Journey</span>
           </h3>
-          
+
           {/* Timeline Line */}
           <div className="absolute left-1/2 top-20 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary/20 hidden md:block" />
 
@@ -330,16 +331,14 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
-                className={`relative flex flex-col md:flex-row items-center gap-4 md:gap-8 ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
-                }`}
+                className={`relative flex flex-col md:flex-row items-center gap-4 md:gap-8 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  }`}
               >
                 {/* Content Card */}
                 <motion.div
                   whileHover={{ scale: 1.03 }}
-                  className={`w-full md:w-[calc(50%-2rem)] bg-card p-6 rounded-2xl shadow-card hover:shadow-card-hover transition-all border border-border/50 hover:border-primary/30 ${
-                    index % 2 === 0 ? "md:text-right" : ""
-                  }`}
+                  className={`w-full md:w-[calc(50%-2rem)] bg-card p-6 rounded-2xl shadow-card hover:shadow-card-hover transition-all border border-border/50 hover:border-primary/30 ${index % 2 === 0 ? "md:text-right" : ""
+                    }`}
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <Calendar className="w-4 h-4 text-primary" />

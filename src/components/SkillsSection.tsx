@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useState } from "react";
+import React, { useState } from "react";
 import { 
   Figma, 
   Palette, 
@@ -12,7 +12,11 @@ import {
   Code,
   FileCode,
   Braces,
-  Sparkles
+  Sparkles,
+  Circle,
+  CircleArrowOutDownRightIcon,
+  CircleAlert,
+  TriangleRight
 } from "lucide-react";
 
 const skills = [
@@ -88,6 +92,31 @@ const skills = [
     description: "Interactive Features",
     category: "development"
   },
+  {
+    name: "Bootstrap",
+    level: 55,
+    icon: Layout,
+    color: "from-purple-600 to-blue-400",
+    description: "Responsive Layouts & Components",
+    category: "development"
+  },
+  {
+    name: "React",
+    level: 30,
+    icon: TriangleRight,
+    color: "from-cyan-500 to-blue-500",
+    description: "Modern Frontend Development",
+    category: "development"
+  },
+  {
+    name: "TypeScript",
+    level: 40,
+    icon: FileCode,
+    color: "from-blue-600 to-indigo-500",
+    description: "Typed JavaScript for Scalability",
+    category: "development"
+  },
+
 ];
 
 const categories = [
@@ -197,9 +226,9 @@ function SkillCard({ skill, index }: { skill: typeof skills[0]; index: number })
 }
 
 export function SkillsSection() {
-  const [activeCategory, setActiveCategory] = useState("all");
+  const [activeCategory, setActiveCategory] = useState("design");
 
-  const filteredSkills = activeCategory === "all" 
+  const filteredSkills = activeCategory === "all"
     ? skills 
     : skills.filter(s => s.category === activeCategory);
 

@@ -15,7 +15,7 @@ const techStack = [
   { name: "JavaScript", color: "from-yellow-400 to-yellow-600" },
 ];
 
-const roles = ["UX/UI Designer", "Creative Thinker", "Problem Solver", "Visual Storyteller"];
+const roles = ["No Comfort Zone", "Always Evolving", "Quietly Dominant", "Vision First"];
 
 function TypewriterText() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
