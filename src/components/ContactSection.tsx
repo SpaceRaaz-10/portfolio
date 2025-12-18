@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "rajsigdel1000@gmail.com" },
@@ -58,7 +59,7 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // 🔒 Validation: block empty form
+    // Check for empty fields
     if (
       !formData.name.trim() ||
       !formData.email.trim() ||
@@ -66,8 +67,8 @@ export function ContactSection() {
       !formData.message.trim()
     ) {
       toast({
-        title: "Tait Budahoo!!!! Incomplete form",
-        description: "Please fill out all fields before sending the message.",
+        title: "Incomplete form",
+        description: "Please fill out all fields before sending.",
         variant: "destructive",
       });
       return;
@@ -75,22 +76,41 @@ export function ContactSection() {
 
     setIsSubmitting(true);
 
-    // Simulated submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      // Send email with EmailJS
+      await emailjs.send(
+        "service_eye4mzi",         // Service ID
+        "template_z42a01i",        // Template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          time: new Date().toLocaleString(),
+        },
+        "cZF5hP0kT-Mrk0M3b"        // Public Key
+      );
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I’ll get back to you soon.",
-    });
+      toast({
+        title: "Message sent!",
+        description: "Thanks for reaching out. I’ll get back to you soon.",
+      });
 
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-
-    setIsSubmitting(false);
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      toast({
+        title: "Failed to send",
+        description: "Something went wrong. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -189,7 +209,7 @@ export function ContactSection() {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-card rounded-3xl p-8 shadow-card space-y-6"
+              className="bg-card rounde d-3xl p-8 shadow-card space-y-6"
             >
               <div className="grid sm:grid-cols-2 gap-6">
                 <Input
@@ -229,10 +249,10 @@ export function ContactSection() {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full h-14 bg-gradient-primary color-white rounded-xl text-lg font-semibold"
+                className="w-full h-14 bg-gradient-primary rounded-xl text-lg font-semibold flex items-center justify-center gap-2"
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
-                <Send className="w-5 h-5 ml-2" />
+                <Send className="w-5 h-5" />
               </Button>
             </form>
           </motion.div>
