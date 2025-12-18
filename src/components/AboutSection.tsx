@@ -1,24 +1,25 @@
 import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
-import { Award, Coffee, Users, Briefcase, Heart, MapPin, Calendar, Star, Zap, BookOpen, Palette, Download } from "lucide-react";
+import { Award, Coffee, Users, Briefcase, Heart, MapPin, Calendar, Star, Zap, BookOpen, Palette, Download, Laptop, Gamepad, Code } from "lucide-react";
 import rajPhoto from "@/assets/raj.jpg";
 
 const stats = [
-  { label: "Years Learning UX", value: 1.5, suffix: "", icon: BookOpen },
-  { label: "Projects Completed", value: 5, suffix: "", icon: Award },
+  { label: "Years Learning UX", value: 1.5, suffix: "", icon: Laptop },
+  { label: "Projects Completed", value: 10, suffix: "", icon: Award },
   { label: "Design Skills", value: 10, suffix: "+", icon: Palette },
-  { label: "Cups of Coffee", value: 500, suffix: "+", icon: Coffee },
+  { label: "Cups of Coffee", value: 250, suffix: "+", icon: Coffee },
 ];
 
 const journey = [
   { year: "2024", title: "Learning UX/UI Design", description: "Started self-learning UX/UI design from online sources" },
-  { year: "April 2025", title: "Building Projects", description: "Started making UX/UI projects and continuing to build more" },
+  { year: "Jan 2025", title: "SEO & Graphic Design", description: "Started Working as Graphic Designer & SEO At Blaze Mountain Trabel" },
+  { year: "2025", title: "Web Desiging", description: "Building Projects and continuing to build more" },
 ];
 
 const interests = [
   { icon: Heart, label: "Design Trends" },
-  { icon: Coffee, label: "Coffee" },
-  { icon: Star, label: "Learning" },
+  { icon: BookOpen, label: "Learning" },
+  { icon: Gamepad, label: "Games" },
   { icon: Zap, label: "Creativity" },
 ];
 
@@ -210,7 +211,7 @@ export function AboutSection() {
                 transition={{ delay: 0.2 }}
               >
                 Currently, I work as a <span className="text-foreground font-semibold">Graphic Designer at Blaze Mountains Travels</span> while 
-                pursuing my passion for UX/UI design through self-learning. I've completed <span className="text-foreground font-semibold">5 personal projects</span> to 
+                pursuing my passion for UX/UI design through self-learning. I've completed <span className="text-foreground font-semibold">almost 7 personal projects</span> to 
                 build my skills and portfolio.
               </motion.p>
               <motion.p
@@ -219,7 +220,7 @@ export function AboutSection() {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                While I'm still developing my technical skills in tools like XD and JavaScript, 
+                While I'm still developing my technical skills in tools like Figma and Web Development related software, 
                 I bring <span className="text-foreground font-semibold">creativity, dedication, and a strong design eye</span> from my 
                 graphic design background. I'm eager to grow and take on new challenges in UX/UI.
               </motion.p>

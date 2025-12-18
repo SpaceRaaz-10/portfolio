@@ -14,9 +14,7 @@ export function Footer() {
           className="flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-2 text-muted-foreground">
-            <span>© {currentYear} Raj Sigdel. Made with</span>
-            <Heart className="w-4 h-4 text-destructive fill-destructive animate-pulse" />
-            <span>in Nepal</span>
+            <span>© {currentYear} Raj Sigdel.</span>
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">

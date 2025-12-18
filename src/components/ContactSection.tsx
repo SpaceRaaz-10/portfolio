@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Phone, Linkedin, Twitter, Facebook, Instagram } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Linkedin, Twitter, Facebook, Instagram, Dribbble, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -16,7 +16,7 @@ const socialLinks = [
   { icon: Linkedin, href: "https://www.linkedin.com/in/raj-sigdel/", label: "LinkedIn" },
   { icon: Twitter, href: "https://x.com/raj_sigdell", label: "Twitter" },
   { icon: Facebook, href: "https://www.facebook.com/raj.sigdelll", label: "Facebook" },
-  { icon: Instagram, href: "https://www.instagram.com/raj_sigdelll/", label: "Instagram" },
+  { icon: Dribbble, href: "https://dribbble.com/rajspace", label: "Dribble" },
 ];
 
 export function ContactSection() {
