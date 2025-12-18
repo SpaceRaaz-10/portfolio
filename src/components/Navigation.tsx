@@ -70,8 +70,8 @@ export function Navigation({ isDark, toggleTheme }: NavigationProps) {
             className="text-2xl font-bold tracking-tight"
             whileHover={{ scale: 1.05 }}
           >
-            <span className="text-gradient">Raj</span>
-            <span className="text-foreground">Sigdel</span>
+            <span className="text-gradient">R</span>
+            <span className="text-foreground">S</span>
           </motion.a>
 
           {/* Desktop Navigation */}
