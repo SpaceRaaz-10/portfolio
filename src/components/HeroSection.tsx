@@ -15,7 +15,7 @@ const techStack = [
   { name: "JavaScript", color: "from-yellow-400 to-yellow-600" },
 ];
 
-const roles = ["No Comfort Zone", "Always Evolving", "Quietly Dominant", "Vision First"];
+const roles = ["No Comfort Zone", "Always Evolving", "", "Vision First"];
 
 function TypewriterText() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);

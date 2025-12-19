@@ -6,7 +6,7 @@ import { UserRound } from "lucide-react";
 
 const stats = [
   { label: "Years Learning UX", value: 1.5, suffix: "", icon: Laptop },
-  { label: "Projects Completed", value: 10, suffix: "", icon: Award },
+  { label: "Projects Completed", value: 10, suffix: "+", icon: Award },
   { label: "Design Skills", value: 10, suffix: "+", icon: Palette },
   { label: "Cups of Coffee", value: 250, suffix: "+", icon: Coffee },
 ];
