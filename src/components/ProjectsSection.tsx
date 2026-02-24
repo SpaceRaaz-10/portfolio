@@ -7,7 +7,7 @@ import { useRef, useState } from "react";
 const projects = [
 {
     id: 1,
-    title: "Mountain Trekking Website",
+    title: "Trekking Website",
     description:
       "A clean and user-friendly trekking website design focused on clear navigation, engaging visuals, and smooth prototyping to enhance the overall user experience.",
     category: "Website",
