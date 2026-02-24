@@ -5,42 +5,20 @@ import { Badge } from "@/components/ui/badge";
 import { useRef, useState } from "react";
 
 const projects = [
-  {
+{
     id: 1,
-    title: "Mountain Info Website",
+    title: "Mountain Trekking Website",
     description:
-      "The Mountain Website project focuses on designing a modern, user-friendly platform that highlights Nepal’s and Different country mountains.",
+      "A clean and user-friendly trekking website design focused on clear navigation, engaging visuals, and smooth prototyping to enhance the overall user experience.",
     category: "Website",
     tools: ["Figma"],
-    color: "from-orange-400 to-white-400",
-    image: "/Project/mountain.jpg",
-    link: "https://www.figma.com/proto/9OIa2uO1DQjcy5Fya6l2ck/Mountain-Website-UI?node-id=1-2&t=twaFoTIvA57snx2g-6&starting-point-node-id=1%3A2",
+    color: "from-purple-500 to-white-500",
+    image: "/Project/trekking.png",
+    link: "https://www.figma.com/proto/O6JfORZk4WsDdnUHydheIt/Blaze-Mountain-Project?node-id=1-2&p=f&t=2N7oMImH7G6POvhU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
   },
   {
     id: 2,
-    title: "Gym Tracker App",
-    description:
-      "A modern and user-friendly gym app designed in Figma, focused on tracking workouts, personalized fitness plans, and visualizing progress through a clean, motivating interface.",
-    category: "Mobile App",
-    tools: ["Figma", "Photoshop", "Framer"],
-    color: "from-pink-500 to-white-500",
-    image: "/Project/gymapp.jpg",
-    link: "https://www.figma.com/proto/yjojigF68gGpcYtQ6yCCZJ/Fitness-App?node-id=221-124&t=twaFoTIvA57snx2g-6&starting-point-node-id=221%3A124",
-  },
-  {
-    id: 3,
-    title: "Stripe Redesign",
-    description:
-      "A polished, trust-first payment platform redesigned inspired by Stripe.",
-    category: "Business Website",
-    tools: ["Figma", "Photoshop"],
-    color: "from-purple-500 to-white-500",
-    image: "/Project/stripe.jpg",
-    link: "https://www.figma.com/proto/iXsz1YtBV5iuM3qr0eQcBn/Stripe?node-id=1-4&t=twaFoTIvA57snx2g-6",
-  },
-  {
-    id: 4,
-    title: "Real Estate Admin Dashboard",
+    title: "Real Estate Admin Dashboard Design",
     description:
       "This project is a Real Estate Admin Dashboard built for easy property management. Users can add, edit, and delete listings, track agents, and view key metrics like total properties, revenue, and sales.",
     category: "Backend Dashboard",
@@ -50,8 +28,19 @@ const projects = [
     link: "https://www.figma.com/proto/xWQfnMOJSh2FS4TWICAG5c/Real-State-Admin?page-id=0%3A1&node-id=1-2&viewport=237%2C-29%2C0.21&t=gBhWsboZYotTI9R4-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1",
   },
   {
-    id: 5,
-    title: "Smoothie Juice Website",
+    id: 3,
+    title: "Mountain Information Website",
+    description:
+      "The Mountain Website project focuses on designing a modern, user-friendly platform that highlights Nepal’s and Different country mountains.",
+    category: "Website",
+    tools: ["Figma"],
+    color: "from-orange-400 to-white-400",
+    image: "/Project/mountain.jpg",
+    link: "https://www.figma.com/proto/9OIa2uO1DQjcy5Fya6l2ck/Mountain-Website-UI?node-id=1-2&t=twaFoTIvA57snx2g-6&starting-point-node-id=1%3A2",
+  },
+  {
+    id: 4,
+    title: "Smoothie Juice Website Design",
     description:
       "Drop Smoothie is a vibrant and refreshing smoothie juice brand concept.",
     category: "Website",
@@ -61,16 +50,30 @@ const projects = [
     link: "https://www.figma.com/proto/sHFagBdhzgngDgpOLJrIpz/Smootte-Juice-UI?node-id=10-219&t=twaFoTIvA57snx2g-6&starting-point-node-id=10%3A219",
   },
   {
-    id: 6,
-    title: "Trekking Website",
+    id: 5,
+    title: "Gym Tracker App Design",
     description:
-      "A clean and user-friendly trekking website design focused on clear navigation, engaging visuals, and smooth prototyping to enhance the overall user experience.",
-    category: "Website",
-    tools: ["Figma"],
-    color: "from-purple-500 to-white-500",
-    image: "/Project/trekking.png",
-    link: "https://www.figma.com/proto/O6JfORZk4WsDdnUHydheIt/Blaze-Mountain-Project?node-id=1-2&p=f&t=2N7oMImH7G6POvhU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+      "A modern and user-friendly gym app designed in Figma, focused on tracking workouts, personalized fitness plans, and visualizing progress through a clean, motivating interface.",
+    category: "Mobile App",
+    tools: ["Figma", "Photoshop", "Framer"],
+    color: "from-pink-500 to-white-500",
+    image: "/Project/gymapp.jpg",
+    link: "https://www.figma.com/proto/yjojigF68gGpcYtQ6yCCZJ/Fitness-App?node-id=221-124&t=twaFoTIvA57snx2g-6&starting-point-node-id=221%3A124",
   },
+  {
+    id: 6,
+    title: "Stripe Redesign Project",
+    description:
+      "A polished, trust-first payment platform redesigned inspired by Stripe.",
+    category: "Business Website",
+    tools: ["Figma", "Photoshop"],
+    color: "from-purple-500 to-white-500",
+    image: "/Project/stripe.jpg",
+    link: "https://www.figma.com/proto/iXsz1YtBV5iuM3qr0eQcBn/Stripe?node-id=1-4&t=twaFoTIvA57snx2g-6",
+  },
+  
+  
+  
 ];
 
 export function ProjectsSection() {
@@ -113,7 +116,7 @@ export function ProjectsSection() {
           </p>
         </motion.div>
 
-        {/* Projects Grid */}
+        {/* Projects grid */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
