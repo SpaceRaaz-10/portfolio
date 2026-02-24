@@ -62,14 +62,14 @@ const projects = [
   },
   {
     id: 6,
-    title: "Workfolio Website",
+    title: "Trekking Website",
     description:
-      "This project is a marketing-focused portfolio website designed to clearly showcase skills and work. I used strong visuals, structured content, and clean layouts to create a modern, user-centered platform for presenting achievements.",
+      "A clean and user-friendly trekking website design focused on clear navigation, engaging visuals, and smooth prototyping to enhance the overall user experience.",
     category: "Website",
     tools: ["Figma"],
     color: "from-purple-500 to-white-500",
-    image: "/Project/wokfolio.png",
-    link: "https://www.figma.com/proto/agI8fBcaQi8XdZS5glDn8p/GetWorkFolio?page-id=0%3A1&node-id=1-2&p=f&viewport=1064%2C-841%2C0.26&t=ghPS375fjHnIt6Ho-1&scaling=scale-down&content-scaling=fixed",
+    image: "/Project/trekking.png",
+    link: "https://www.figma.com/proto/O6JfORZk4WsDdnUHydheIt/Blaze-Mountain-Project?node-id=1-2&p=f&t=2N7oMImH7G6POvhU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
   },
 ];
 
