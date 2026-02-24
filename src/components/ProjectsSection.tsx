@@ -13,7 +13,7 @@ const projects = [
     category: "Website",
     tools: ["Figma"],
     color: "from-purple-500 to-white-500",
-    image: "/Project/trekking.png",
+    image: "/Project/trek.png",
     link: "https://www.figma.com/proto/O6JfORZk4WsDdnUHydheIt/Blaze-Mountain-Project?node-id=1-2&p=f&t=2N7oMImH7G6POvhU-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
   },
   {
