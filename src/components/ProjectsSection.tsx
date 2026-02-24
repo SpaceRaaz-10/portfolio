@@ -58,7 +58,7 @@ const projects = [
     tools: ["Figma", "Photoshop", "Framer"],
     color: "from-pink-500 to-white-500",
     image: "/Project/gymapp.jpg",
-    link: "https://www.figma.com/proto/yjojigF68gGpcYtQ6yCCZJ/Fitness-App?node-id=221-124&t=twaFoTIvA57snx2g-6&starting-point-node-id=221%3A124",
+    link: "https://www.figma.com/proto/yjojigF68gGpcYtQ6yCCZJ/Fitness-App?node-id=1-125&t=3hptaaBxtDwZtzaA-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
   },
   {
     id: 6,
